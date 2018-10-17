@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+		div[data-status='done'] 
+    span{
+		  text-decoration:line-through;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="tasks">
+      <div><button>Finish</button><span>Finish web tasks</span></div>
+      <div><button>Finish</button><span>Go to gym</span></div>
+      <div><button>Finish</button><span>Clean home</span></div>
+      <div><button>Finish</button><span>Start project</span></div>
+      <div><button>Finish</button><span>Prepare to calculus</span></div>
+    </div>
+	
+<script type = "text/javascript">
+let buttons = document.getElementsByTagName('button');
+for(let i=0; i<buttons.length;i++){
+    buttons[i].addEventListener("click",function(){
+        buttons[i].parentElement.setAttribute('data-status','done');
+    });
+}
+</script>
+  </body>
+
+</html>
